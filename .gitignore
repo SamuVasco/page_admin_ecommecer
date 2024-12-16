@@ -1,0 +1,55 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__
+*.db
+*.sqlite3
+
+# Django
+*.log
+*.pot
+*.py[cod]
+*.bak
+*.swp
+*.swo
+*.orig
+*.tmp
+*.DS_Store
+
+# Pasta de migrações
+*/migrations/*
+
+# Arquivos de configuração local
+.env
+.env.*
+local_settings.py
+
+# Dependências de ambiente virtual
+venv/
+env/
+.venv/
+.env/
+
+# IDEs e editores
+.idea/
+.vscode/
+
+# Sistema operacional
+Thumbs.db
+Desktop.ini
+
+# Arquivos de banco de dados temporário
+*.sqlite3-journal
+
+# Arquivos de compilação
+build/
+dist/
+*.egg-info/
+.eggs/
+*.log
+
+# Arquivos do Docker
+*.dockerignore
+Dockerfile
+docker-compose.yml
