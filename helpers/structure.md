@@ -80,8 +80,7 @@ Este projeto foi criado para fornecer uma estrutura escalável para uma aplicaç
 ### **Boas Práticas**
 
 1. **Divisão por Funcionalidades**: Cada funcionalidade do projeto (produtos, pedidos, notificações) tem seu próprio app, o que torna o código modular e mais fácil de gerenciar.
-2. **Uso de Class-Based Views (CBVs)**: Utilizar views baseadas em classes (CBVs) ao invés de funções, para maior flexibilidade e reutilização de código.
-3. **Tarefas Assíncronas com Celery**: Usar Celery para processar tarefas pesadas e assíncronas, como envio de e-mails e processamento de pagamentos.
-4. **Notificações em Tempo Real com Channels**: Utilizar Django Channels para implementar funcionalidades de WebSockets, permitindo comunicação em tempo real com os clientes.
+2. **Tarefas Assíncronas com Celery**: Usar Celery para processar tarefas pesadas e assíncronas, como envio de e-mails e processamento de pagamentos.
+3. **Notificações em Tempo Real com Channels**: Utilizar Django Channels para implementar funcionalidades de WebSockets, permitindo comunicação em tempo real com os clientes.
 
 ---
