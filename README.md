@@ -12,26 +12,6 @@ Este projeto é um painel de administração para um sistema de e-commerce. Ele 
 - **Celery**: Para gerenciamento de tarefas assíncronas, como envio de e-mails e processamento de pedidos.
 - **PostgreSQL** (ou outro banco de dados) para armazenamento dos dados do sistema.
 
-## Funcionalidades do Projeto
-
-Este projeto fornece uma série de funcionalidades para gerenciar um painel de administração de e-commerce, com API RESTful, notificações em tempo real, e processos assíncronos. As principais funcionalidades são:
-
-### 1. **API para Consulta de Produtos**
-
-A API permite realizar consultas detalhadas sobre os produtos cadastrados no sistema. É possível:
-
-- **Listar todos os produtos**: Através de um endpoint que retorna todos os produtos disponíveis.
-- **Filtragem de produtos**: Filtros baseados em diferentes parâmetros, como categoria, preço, nome, etc., para permitir consultas mais precisas e personalizadas.
-- **Detalhamento de produto**: Consultar informações detalhadas sobre um produto específico usando o ID.
-
-### 2. **Geração de Pedidos**
-
-A API também permite criar, listar e gerenciar os pedidos feitos pelos clientes. Isso inclui:
-
-- **Criação de pedidos**: O administrador pode criar pedidos, associando produtos aos mesmos.
-- **Consulta de pedidos**: Através de um endpoint, é possível listar todos os pedidos feitos e consultar informações detalhadas de cada pedido.
-- **Atualização de status de pedidos**: O status do pedido pode ser alterado conforme o andamento, como "Em Processamento", "Enviado", "Entregue", etc.
-
 ### 3. **Notificação em Tempo Real com Django Channels**
 
 Utilizando o Django Channels, a aplicação oferece funcionalidades em tempo real, como:

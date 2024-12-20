@@ -1,0 +1,210 @@
+{% extends "base.html" %} {% load static %} {% block title %} Login {%endblock%}
+{% block content %}
+<div class="d-flex flex-column flex-root" id="kt_app_root">
+  <!--begin::Imagem de fundo da página-->
+  <style>
+    body {
+      background-image: url('{% static "assets/media/auth/bg10.jpeg" %}');
+    }
+    [data-bs-theme="dark"] body {
+      background-image: url('{% static "assets/media/auth/bg10-dark.jpeg" %}');
+    }
+  </style>
+  <!--end::Imagem de fundo da página-->
+  <!--begin::Suporte - Abrir Chamado -->
+  <div class="d-flex flex-column flex-lg-row flex-column-fluid">
+    <!--begin::Lado esquerdo-->
+    <div class="d-flex flex-lg-row-fluid">
+      <!--begin::Conteúdo-->
+      <div class="d-flex flex-column flex-center pb-0 pb-lg-10 p-10 w-100">
+        <!--begin::Imagem-->
+        <img
+          class="theme-light-show mx-auto mw-100 w-150px w-lg-300px mb-10 mb-lg-20"
+          src="{% static 'assets/media/auth/9.png' %}"
+          alt="Logo"
+        />
+        <img
+          class="theme-dark-show mx-auto mw-100 w-150px w-lg-300px mb-10 mb-lg-20"
+          src="{% static 'assets/media/auth/9-dark.png' %}"
+          alt="Logo"
+        />
+        <!--end::Imagem-->
+        <!--begin::Título-->
+        <h1 class="text-gray-800 fs-2qx fw-bold text-center mb-7">
+          Maxxx Móveis - Suporte
+        </h1>
+        <!--end::Título-->
+        <!--begin::Texto-->
+        <div class="text-gray-600 fs-base text-center fw-semibold">
+          Precisa de ajuda? Preencha o formulário para abrir um chamado e nossa
+          equipe entrará em contato com você o mais breve possível.
+        </div>
+        <!--end::Texto-->
+      </div>
+      <!--end::Conteúdo-->
+    </div>
+    <!--end::Lado esquerdo-->
+    <!--begin::Corpo-->
+    <div
+      class="d-flex flex-column-fluid flex-lg-row-auto justify-content-center justify-content-lg-end p-12"
+    >
+      <!--begin::Wrapper-->
+      <div
+        class="bg-body d-flex flex-column flex-center rounded-4 w-md-600px p-10"
+      >
+        <!--begin::Conteúdo-->
+        <div
+          class="d-flex flex-center flex-column align-items-stretch h-lg-100 w-md-400px"
+        >
+          <!--begin::Wrapper-->
+          <div
+            class="d-flex flex-center flex-column flex-column-fluid pb-15 pb-lg-20"
+          >
+            <!--begin::Logo-->
+            <a href="index.html" class="mb-0 mb-lg-12">
+              <img
+                alt="Logo"
+                src="{% static 'assets/media/logo.png' %}"
+                class="h-100px h-lg-100px"
+              />
+            </a>
+            <!--end::Logo-->
+            <!--begin::Formulário-->
+            <form
+              class="form w-100"
+              novalidate="novalidate"
+              id="kt_support_form"
+              action="{% url 'suporte' %}"
+              method="POST"
+            >
+              <!--begin::Cabeçalho-->
+              <div class="text-center mb-11">
+                <!--begin::Título-->
+                <h1 class="text-gray-900 fw-bolder mb-3">Suporte</h1>
+                <!--end::Título-->
+                <!--begin::Subtítulo-->
+                <div class="text-gray-500 fw-semibold fs-6">
+                  Forneça os detalhes do problema
+                </div>
+                <!--end::Subtítulo-->
+              </div>
+              <!--end::Cabeçalho-->
+
+              <!--begin::Campo Nome-->
+              <label class="form-label">Nome</label>
+              <div class="input-group fv-row mb-2">
+                <span class="input-group-text" id="basic-addon1">
+                  <i class="ki-solid ki-user fs-1"> </i>
+                </span>
+                <input
+                  type="text"
+                  placeholder="Digite seu nome"
+                  name="name"
+                  aria-describedby="basic-addon1"
+                  autocomplete="off"
+                  class="form-control bg-transparent"
+                />
+              </div>
+              <!--end::Campo Nome-->
+
+              <!--begin::Campo Telefone-->
+              <label class="form-label">Numero de contato</label>
+              <div class="input-group fv-row mb-2">
+                <span class="input-group-text" id="basic-addon2">
+                  <i class="bi bi-telephone-fill fs-1"></i>
+                </span>
+                <input
+                  type="text"
+                  placeholder="Digite seu telefone"
+                  name="phone"
+                  aria-describedby="basic-addon2"
+                  autocomplete="off"
+                  class="form-control bg-transparent"
+                />
+              </div>
+              <!--end::Campo Telefone-->
+
+              <!--begin::Email-->
+              <label class="form-label">Email de Contato</label>
+              <div class="input-group fv-row mb-2">
+                <span
+                  style="font-size: 20px"
+                  class="input-group-text"
+                  id="basic-addon1"
+                >
+                  <i class="ki-solid ki-sms fs-1"> </i>
+                </span>
+                <input
+                  type="text"
+                  placeholder="Digite seu E-mail"
+                  name="email"
+                  aria-describedby="basic-addon1"
+                  autocomplete="off"
+                  class="form-control bg-transparent"
+                />
+              </div>
+              <!--end::Email-->
+
+              <!--begin::Campo Descrição do Problema-->
+              <label class="form-label">Descrição do Problema</label>
+              <div class="input-group fv-row mb-4">
+                <span class="input-group-text" id="basic-addon3">
+                  <i class="ki-solid ki-message-text fs-1"> </i>
+                </span>
+                <input
+                  type="text"
+                  placeholder="Descreva seu problema"
+                  name="description"
+                  aria-describedby="basic-addon1"
+                  autocomplete="off"
+                  class="form-control bg-transparent"
+                />
+              </div>
+              <!--end::Campo Descrição do Problema-->
+
+              <!--begin::Botão de envio-->
+              <div class="d-grid mb-10">
+                <button
+                  type="submit"
+                  id="kt_support_submit"
+                  class="btn btn-primary"
+                >
+                  <!--begin::Texto do botão-->
+                  <span class="indicator-label">Enviar Chamado</span>
+                  <!--end::Texto do botão-->
+                  <!--begin::Progresso-->
+                  <span class="indicator-progress"
+                    >Aguarde...
+                    <span
+                      class="spinner-border spinner-border-sm align-middle ms-2"
+                    ></span
+                  ></span>
+                  <!--end::Progresso-->
+                </button>
+              </div>
+              <!--end::Botão de envio-->
+              <!--begin::login-->
+              <div class="text-gray-500 text-center fw-semibold fs-6">
+                Ir para pagina de
+                <a href="{% url 'login' %}" class="link-primary">Login</a>
+              </div>
+              <!--end::login-->
+            </form>
+            <!--end::Formulário-->
+          </div>
+          <!--end::Wrapper-->
+        </div>
+        <!--end::Conteúdo-->
+        <div class="d-flex fw-semibold text-primary fs-base gap-5">
+          <a href="#" target="_blank">Termos</a>
+          <a href="#" target="_blank">Contatos</a>
+        </div>
+      </div>
+      <!--end::Wrapper-->
+    </div>
+    <!--end::Corpo-->
+  </div>
+  <!--end::Suporte - Abrir Chamado-->
+</div>
+
+{% endblock %}
