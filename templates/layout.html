@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+  <header>
+    {% block header %}
+    <h1>Bem-vindo ao Meu Site</h1>
+  {% endblock %}
+  </header>
+  <main>
+    {% block main_content %}
+      <p>Este é o conteúdo principal.</p>
+    {% endblock %}
+  </main>
+  <footer>
+    {% block footer %}
+      <p>© 2024 Meu Site. Todos os direitos reservados.</p>
+    {% endblock %}
+  </footer>
+{% endblock %}

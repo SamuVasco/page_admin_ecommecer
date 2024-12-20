@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Maxxx Moveis{% endblock %}</title>
+    {% block css %}
+
+    <!-- Configuração de pagina -->
+    <!-- define a codificação de caracteres da página como UTF-8. -->
+    <meta charset="utf-8" />
+    <!-- Fornece uma descrição breve da página para mecanismos de busca (SEO) e para pré-visualizações em redes sociais. -->
+    <meta
+      name="description"
+      content="{% block description %}Painel Administrativo MaxxxMoveis{% endblock %}"
+    />
+    <!-- Lista palavras-chave relacionadas ao conteúdo da página para ajudar nos resultados de busca (menos usado em SEO moderno, mas ainda relevante). -->
+    <meta
+      name="keywords"
+      content="{% block keywords %}painel, admin{% endblock %}"
+    />
+    <!-- Configura o design responsivo, ajustando a largura da página à largura da tela do dispositivo. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Define o idioma e a região da página para a Open Graph (usado em pré-visualizações em redes sociais como Facebook). -->
+    <meta property="og:locale" content="pt_BR" />
+    <!-- Define o título da página para pré-visualizações em redes sociais. -->
+    <meta property="og:title" content="" />
+    <!-- Define a URL canônica da página para a Open Graph, garantindo que redes sociais apontem para a URL correta -->
+    <meta property="og:url" content="https://painel.maxxxmoveis.com.br" />
+    <!-- Indica o nome do site para pré-visualizações em redes sociais. -->
+    <meta
+      property="og:site_name"
+      content="Painel Administrativo Maxxx Moveis"
+    />
+    <!-- Define a URL principal (canônica) da página para evitar problemas de duplicação de conteúdo nos mecanismos de busca.  -->
+    <link rel="canonical" href="https://painel.maxxxmoveis.com.br" />
+    <!-- Aponta para o ícone do site exibido na aba do navegador. -->
+    <link rel="shortcut icon" href="{% static 'media/logos/favicon.ico' %}" />
+
+    <!--begin::Fonts(mandatory for all pages)-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700"
+    />
+    <!--end::Fonts-->
+    <!--begin::Vendor Stylesheets(used for this page only)-->
+    <link
+      href="{% static 'assets/plugins/custom/fullcalendar/fullcalendar.bundle.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'assets/plugins/custom/datatables/datatables.bundle.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!--end::Vendor Stylesheets-->
+    <!--begin::Global Stylesheets Bundle(mandatory for all pages)-->
+    <link
+      href="{% static 'assets/plugins/global/plugins.bundle.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'assets/css/style.bundle.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    {% endblock %}
+  </head>
+  <body>
+    {% block content %}content{% endblock %} {% block js %}
+    <!-- Adicione aqui seus scripts JavaScript -->
+    <script>
+      var hostUrl = "assets/";
+    </script>
+    <!--begin::Global Javascript Bundle(mandatory for all pages)-->
+    <script src="{% static 'assets/plugins/global/plugins.bundle.js' %}"></script>
+    <script src="{% static 'assets/js/scripts.bundle.js' %}"></script>
+    <!--end::Global Javascript Bundle-->
+
+    <!--begin::Vendors Javascript(used for this page only)-->
+    <script src="{% static 'assets/plugins/custom/fullcalendar/fullcalendar.bundle.js' %}"></script>
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/geodata/continentsLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/geodata/usaLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZonesLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZoneAreasLow.js"></script>
+    <script src="{% static 'assets/plugins/custom/datatables/datatables.bundle.js' %}"></script>
+
+    {% endblock %}
+  </body>
+</html>
