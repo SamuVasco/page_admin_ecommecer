@@ -57,4 +57,4 @@ Essas funcionalidades são essenciais para criar um painel de administração de
 Agradecemos a todos que contribuíram para o desenvolvimento deste projeto!
 
 - **[Matheus-Matta](https://github.com/Matheus-Matta)**
-.
+- **[SamuVasco](https://github.com/SamuVasco)**
