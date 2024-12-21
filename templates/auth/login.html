@@ -80,6 +80,7 @@
               action="{% url 'login' %}"
               method="POST"
             >
+              {% csrf_token %}
               <!--begin::Cabeçalho-->
               <div class="text-center mb-11">
                 <!--begin::Título-->

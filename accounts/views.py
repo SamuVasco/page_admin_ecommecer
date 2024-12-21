@@ -11,7 +11,14 @@ class LoginPageView(View):
     def get(self, request, *args, **kwargs):
         return render(request, self.template_name)
     
-    
+    def post(self, request, *args, **kwargs):
+        email = request.POST.get("email")
+        password = request.POST.get("password")
+        user = authenticate(request, email=email, password=password)
+        if user:
+            login(request, user)
+            return redirect("index")
+        return redirect("login")
 
 
 # Suporte Page View
@@ -20,3 +27,4 @@ class SuportePageView(View):
 
     def get(self, request, *args, **kwargs):
         return render(request, self.template_name)
+    
